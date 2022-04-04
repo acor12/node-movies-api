@@ -1,4 +1,4 @@
-# Example
+# Node Movies Api
 
 To run this project:
 
