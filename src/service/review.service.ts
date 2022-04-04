@@ -19,10 +19,18 @@ export async function createReview(data: DocumentDefinition<ReviewDocument>) {
         });
 
         movieFound.score = parseFloat(
-          (sumOfScores / reviewCounter + 1).toFixed(2),
+          (sumOfScores / reviewCounter + 1).toFixed(2)
         );
         movieFound.save();
+        console.log(data.author);
+        if (data.author === undefined) {
+          const review = Review.create({
+            ...data,
+            author: "anonymous",
+          });
 
+          return review;
+        }
         return await Review.create(data);
       }
       return { message: "Cant find movie, please try again" };
