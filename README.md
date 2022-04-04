@@ -1,6 +1,6 @@
-# Example
+# Node Movies Api
 
-To run this example:
+To run this project:
 
 - `npm install` or `yarn`
-- `npm run dev` or `yarn dev`
+- `npm start` or `yarn start`
